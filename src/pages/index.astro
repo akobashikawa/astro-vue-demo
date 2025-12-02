@@ -2,7 +2,7 @@
 import Helloworld from '../components/Helloworld.vue';
 import Hello from '../components/Hello.vue';
 
-const apiBase = import.meta.env.API_BASE_URL ?? '/';
+const apiBase = import.meta.env.PUBLIC_API_BASE_URL ?? '/';
 console.log('API base (server):', apiBase);
 ---
 
@@ -19,7 +19,7 @@ console.log('API base (server):', apiBase);
 		<h1>Astro</h1>
 
 		<p>API Base: {apiBase}</p>
-		
+
 		<Helloworld client:load apiBase={apiBase} />
 
 		<Hello client:load apiBase={apiBase} />
